@@ -52,8 +52,8 @@ async def pub_(bot, message):
                             message_id=message.message_id
                         )
                         total_files += 1
-                        await asyncio.sleep(0)
-                    #except FloodWait as e:
+                        #await asyncio.sleep(0)
+                    except FloodWait as e:
                         #await asyncio.sleep(e.x)
                         await bot.copy_message(
                             chat_id=TO,
@@ -63,7 +63,7 @@ async def pub_(bot, message):
                             message_id=message.message_id
                         )
                         total_files += 1
-                        await asyncio.sleep(0)
+                        #await asyncio.sleep(0)
                     except Exception as e:
                         print(e)
                         pass
