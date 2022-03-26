@@ -63,12 +63,12 @@ async def pub_(bot, message):
                             message_id=message.message_id
                         )
                         total_files += 1
-                        await asyncio.sleep(1)
+                        await asyncio.sleep(0)
                     except Exception as e:
                         print(e)
                         pass
                     pling += 1
-                    if pling == 10: 
+                    if pling == 30: 
                         buttons = [[
                             InlineKeyboardButton('Cancel🚫', 'terminate_frwd')
                         ]]
@@ -78,7 +78,7 @@ async def pub_(bot, message):
                             reply_markup=reply_markup, 
                             parse_mode="html"
                         )
-                        pling -= 10
+                        pling -= 30
             except Exception as e:
                 print(e)
                 await m.edit_text(f'Error: {e}')
