@@ -68,7 +68,7 @@ async def pub_(bot, message):
                         print(e)
                         pass
                     pling += 1
-                    if pling == 30: 
+                    if pling == 10: 
                         buttons = [[
                             InlineKeyboardButton('Cancel🚫', 'terminate_frwd')
                         ]]
@@ -78,7 +78,7 @@ async def pub_(bot, message):
                             reply_markup=reply_markup, 
                             parse_mode="html"
                         )
-                        pling -= 30
+                        pling -= 10
             except Exception as e:
                 print(e)
                 await m.edit_text(f'Error: {e}')
